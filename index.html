@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="Controllable Diffusion Models for Radio Astronomical Maps Generation" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="Controllable Diffusion Models for Radio Astronomical Maps Generation">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>RADiff: Controllable Diffusion Models for Radio Astronomical Maps Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RADiff: Controllable Diffusion Models for Radio Astronomical Maps
+              Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="rensortino.github.io" target="_blank">Renato Sortino</a><sup>*</sup>,</span>
+              <span class="author-block">
+                Thomas Cecconello,
+              </span>
+              <span class="author-block">
+                Andrea DeMarco,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=Se2mLvIAAAAJ&hl=en" target="_blank">
+                  Giuseppe Fiameni</a>
+              </span>
+              <span class="author-block">et al.</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Istituto Nazionale di Astrofisica<br>Expert Systems With Applications (under
+                review)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2307.02392.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/SKA-INAF/radiff" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2307.02392" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Along with the nearing completion of the Square Kilometre Array (SKA), comes an increasing demand for
+              accurate and reliable automated solutions to extract valuable information from the vast amount of data it
+              will allow acquiring. Automated source finding is a particularly important task in this context, as it
+              enables the detection and classification of astronomical objects. Deep-learning-based object detection and
+              semantic segmentation models have proven to be suitable for this purpose. However, training such deep
+              networks requires a high volume of labeled data, which is not trivial to obtain in the context of radio
+              astronomy. Since data needs to be manually labeled by experts, this process is not scalable to large
+              dataset sizes, limiting the possibilities of leveraging deep networks to address several tasks. In this
+              work, we propose RADiff, a generative approach based on conditional diffusion models trained over an
+              annotated radio dataset to generate synthetic images, containing radio sources of different morphologies,
+              to augment existing datasets and reduce the problems caused by class imbalances. We also show that it is
+              possible to generate fully-synthetic image-annotation pairs to automatically augment any annotated
+              dataset. We evaluate the effectiveness of this approach by training a semantic segmentation model on a
+              real dataset augmented in two ways: 1) using synthetic images obtained from real masks, and 2) generating
+              images from synthetic semantic masks. We show an improvement in performance when applying augmentation,
+              gaining up to 18% in performance when using real masks and 4% when augmenting with synthetic masks.
+              Finally, we employ this model to generate large-scale radio maps with the objective of simulating Data
+              Challenges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/gen_results.png" alt="Comparison of the generation quality between SOTA models" />
+            <h2 class="subtitle has-text-centered">
+              Comparison of the generation quality between our proposed model and SOTA methods. First column: input
+              mask, center columns: generation results, last column: ground truth. Below each row, residual images are
+              shown to highlight the differences between the generated and the original images.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/background-ablation.png" alt="Evaluation of the background conditioning" />
+            <h2 class="subtitle has-text-centered">
+              Evaluation of the effect of using different background conditioning on the same masks. All the samples are
+              generated using our complete RADiff model.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/ae_quality.png" alt="Evaluation of the reconstruction quality" />
+            <h2 class="subtitle has-text-centered">
+              Reconstruction quality of the autoencoder. The “Residual” column highlights the difference between ground
+              truth and reconstructed.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+
+
+  <!-- Youtube video -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">RADiff for large scale map generation</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <img src="static/images/large-zoom1.png" alt="Large scale map generation" />
+            <h2 class="subtitle has-text-centered">
+              Large scale map generated using a real background noise map populated with synthetically generated objects
+            </h2>
+          </div>
+          <div class="item item-video2">
+            <img src="static/images/large-zoom2.png" alt="Large scale map generation" />
+            <h2 class="subtitle has-text-centered">
+              Large scale map generated using a real background noise map populated with synthetically generated objects
+            </h2>
+          </div>
+          <div class="item item-video3">
+            <img src="static/images/large-zoom3.png" alt="Large scale map generation" />
+            <h2 class="subtitle has-text-centered">
+              Large scale map generated using a real background noise map populated with synthetically generated objects
+            </h2>
+          </div>
+          <div class="item item-video3">
+            <img src="static/images/large-zoom4.png" alt="Large scale map generation" />
+            <h2 class="subtitle has-text-centered">
+              Large scale map generated using a real background noise map populated with synthetically generated objects
+            </h2>
+          </div>
+        </div>
+        <!-- <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/images/large-zoom1.png"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/images/large-zoom2.png"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/images/large-zoom3.png"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/images/large-zoom4.png"
+            type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Paper poster -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/poster.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section>
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
