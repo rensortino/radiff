@@ -1,7 +1,7 @@
 <div align="center">    
  
 # RADiff: Controllable Diffusion Models for Radio Astronomical Map Generation    
-[Renato Sortino](https://rensortino.github.io), [Author 2](https://author2page.com), and [Author 3](https://author3page.com)
+[Renato Sortino](https://rensortino.github.io),  [Thomas Cecconello](http://www.perceivelab.com/profile/tcecconello), [Andrea DeMarco](https://www.um.edu.mt/profile/andreademarco), [Giuseppe Fiameni](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Se2mLvIAAAAJ), [Andrea Pilzer](https://andrea-pilzer.github.io/about/), [Andrew M. Hopkins](https://researchers.mq.edu.au/en/persons/andrew-hopkins), [Daniel Magro](https://github.com/DanielMagro97), [Simone Riggi](https://www.oact.inaf.it/simone-riggi/), [Eva Sciacca](https://www.oact.inaf.it/eva-sciacca/), Adriano Ingallinera, [Cristobal Bordiu](https://scholar.google.es/citations?user=W18yO88AAAAJ&hl=es), [Filomena Bufano](https://www.researchgate.net/profile/Filomena-Bufano), [Concetto Spampinato](https://www.dieei.unict.it/docenti/concetto.spampinato?eng)
 
 [![Paper](http://img.shields.io/badge/paper-arxiv.2307.02392-B31B1B.svg)](https://arxiv.org/abs/2307.02392)
 <!-- [![Conference](http://img.shields.io/badge/{CONFERENCE_NAME}-4b44ce.svg)](https://{CONFERENCE_PROCEEDING_LINK}) -->
