@@ -25,7 +25,7 @@ This repository contains the official PyTorch implementation of the paper titled
 
 <br/>
 
-![Teaser image]({docs/teaser.gif}
+![Teaser image](docs/teaser.gif)
 
 ## Requirements
 1. Clone the repository:
