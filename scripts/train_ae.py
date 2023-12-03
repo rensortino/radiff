@@ -1,9 +1,9 @@
-from utils.parser import get_parser, parse_args
-from utils.model import read_model_config
-from trainers.t_vqvae import VQVAETrainer
 from datasets.radiogalaxy import RGDataset
-from trainers.t_vae import VAETrainer
 from datasets.utils import get_data_loader
+from trainers.t_vae import VAETrainer
+from trainers.t_vqvae import VQVAETrainer
+from utils.model import read_model_config
+from utils.parser import get_parser, parse_args
 
 
 def main():
