@@ -1,0 +1,15 @@
+model:
+  image_size: 32
+  in_channels: 3
+  out_channels: 3
+  model_channels: 256
+  #note: this isn\t actually the resolution but
+  # the downsampling factor, i.e. this corresnponds to
+  # attention on spatial resolution 8,16,32, as the
+  # spatial reolution of the latents is 32 for f8
+  attention_resolutions: [4, 2, 1]
+  num_res_blocks: 2
+  channel_mult: [1, 2, 4]
+  num_head_channels: 32
+  is_unconditional: true
+  use_cross_attn: false
