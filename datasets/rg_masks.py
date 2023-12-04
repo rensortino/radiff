@@ -86,7 +86,7 @@ class MaskRGDataset(RGDataset):
         img = fits.getdata(image_path)
         img = self.transforms(img)
 
-        return img, mask, masked_image
+        return img, mask
 
 
 if __name__ == "__main__":
