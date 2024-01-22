@@ -77,9 +77,9 @@ Note that this folder structure is adapted to the DataLoader in this implementat
 
 
 ## Pretrained Models
-| Datset                          |   Task    | Model        | {METRIC1}           | {METRIC2}                      | Link                                                                                                                                                                                   | Comments                                        
-|---------------------------------|-----------|--------------|---------------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| {DATASET_NAME}                  | {TASK_NAME}    |  {MODEL_NAME} | 5.11           | 3.29                          |    {WEIGHTS_LINK}     |                                                 |  
+| Model        | {METRIC1}           | {METRIC2}                      | Link                                                                                                                                                                                   | Comments                                        
+|--------------|---------------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Autoencoder (VQ-VAE f4) | 5.11           | 3.29                          |    [link](https://drive.google.com/file/d/18Y9KpUSk7hoR1BxjDsEaphBbcNWSOyUU/view?usp=drive_link)     |                                                 |  
 
 
 ## Usage
@@ -98,7 +98,7 @@ TODO
 
 Run the interface using [Gradio](https://www.gradio.app/)
 ```bash
-python gradio_inference.py
+python gradio_app.py
 ```
 
 ### Train on custom datasets
@@ -109,6 +109,7 @@ The first step is to train the autoencoder to reconstruct the images and prepare
 ```bash
 python scripts/train_ae.py \ 
 --ae-config vae-f4.yaml \
+--dataset train.txt \
 --run-dir {OUTPUT_DIR} \ 
 --run-name {RUN_NAME} \
 --on_wandb
@@ -123,6 +124,45 @@ python scripts/train_ldm.py \
 --ae-config vae-f4.yaml \
 --ae-ckpt weights/autoencoder/vae-f4.pt \
 --unet-config unet-cldm-mask.yaml \
+--dataset train.txt \
+--run-dir {OUTPUT_DIR} \ 
+--run-name {RUN_NAME} \
+--on_wandb
+```
+
+### Additional Experiments
+
+We provide additional experiments to test the performance of the model on different tasks. To run them, use the following commands:
+
+#### Train DDPM for unconditional image generation
+
+```bash
+python scripts/train_ddpm.py \ 
+--unet-config unet-pixel.yaml \
+--dataset train.txt \
+--run-dir {OUTPUT_DIR} \ 
+--run-name {RUN_NAME} \
+--on_wandb
+```
+
+#### Train DDPM for mask generation
+
+```bash
+python scripts/train_ddpm.py \ 
+--unet-config unet-pixel-masks.yaml \
+--dataset train.txt \
+--run-dir {OUTPUT_DIR} \ 
+--run-name {RUN_NAME} \
+--on_wandb
+```
+
+#### Train LDM for unconditional image generation
+
+```bash
+python scripts/train_ldm.py \ 
+--ae-config vae-f4.yaml \
+--ae-ckpt weights/autoencoder/vae-f4.pt \
+--unet-config unet-ldm.yaml \
 --dataset train.txt \
 --run-dir {OUTPUT_DIR} \ 
 --run-name {RUN_NAME} \
